@@ -5,6 +5,7 @@ import cv2
 import torch
 import torch.nn as nn
 from torchvision import transforms
+import utils
 
 
 class BidirectionalLSTM(nn.Module):
@@ -175,7 +176,7 @@ transform = transforms.Compose(
 
 model = CRNN(32, 1, 37, 512)
 
-state = torch.load("/home/thinkin-machine/VSCodeWorkspaces/ANPR_V2/out/ocr_point08.pt")
+state = torch.load("./out/ocr_point08.pt")
 model.load_state_dict(state["model"])
 
 

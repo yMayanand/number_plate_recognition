@@ -3,7 +3,7 @@ import cv2
 import torch
 from argparse import ArgumentParser
 import os
-
+import utils
 
 def resize(image, size=640):
     height, width, channels = image.shape
@@ -34,7 +34,7 @@ def add_rect(image, xmin, ymin, xmax, ymax, color=(255, 0, 0), thickness=2):
 model = torch.hub.load(
     "ultralytics/yolov5",
     "custom",
-    path="/home/thinkin-machine/VSCodeWorkspaces/ANPR_V2/out/detection.pt",
+    path="./out/detection.pt",
     force_reload=True,
 )
 
