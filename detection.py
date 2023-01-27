@@ -3,7 +3,7 @@ import cv2
 import torch
 from argparse import ArgumentParser
 import os
-import utils
+import utils_
 
 def resize(image, size=640):
     height, width, channels = image.shape

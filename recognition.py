@@ -5,7 +5,7 @@ import cv2
 import torch
 import torch.nn as nn
 from torchvision import transforms
-import utils
+import utils_
 
 
 class BidirectionalLSTM(nn.Module):
