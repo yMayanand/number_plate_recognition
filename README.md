@@ -12,7 +12,7 @@
 
   image = cv2.imread('test.jpg')
   # predicts bounding boxes and number plate of images
-  boxes, texts = read_number_plate() 
+  boxes, texts = read_number_plate(image) 
   ```
 
 * Using Command line
